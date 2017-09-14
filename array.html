@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*// 数组的合并
+		let arr=[1,2,3];
+		let arr1=['a','b'];
+		// arr.push(...arr1);
+		// arr.splice(2,0,...arr1);
+		arr.unshift(...arr1);
+		console.log(arr);*/
+
+		// 去重
+		 
+		// 第一种方法
+		/*let arr=[1,2,3,4,5,6,2,4,6];
+		function quchong(arr){
+			let newarr = [];
+			for(let i=0;i<arr.length;i++){		
+				if(!newarr.includes(arr[i])){
+					newarr.push(arr[i])
+				}
+			}
+			return  newarr;
+		}
+		console.log(quchong(arr));*/
+
+		// 第二种方法
+		/*let arr=[1,2,3,4,5,6,2,4,6];
+		function quchong(arr){
+			let newarr = [];
+			for(let i=0;i<arr.length;i++){
+				let flag = true;
+				for(let j=i+1;j<arr.length;j++){
+					if(arr[i]==arr[j]){
+						flag=false;
+						break;
+					}
+				}
+				if(flag==true){
+					newarr.push(arr[i]);
+				}
+			}
+			return newarr;
+		}
+		console.log(quchong(arr));*/
+
+		// 给构造函数的原型对象上添加一个方法
+		/*let arr=[1,2,3,4,5,6,2,4,6];
+		Array.prototype.quchong=function(){
+			let newarr = [];
+			for(let i=0;i<this.length;i++){
+				let flag = true;
+				for(let j=i+1;j<this.length;j++){
+					if(this[i]==this[j]){
+						flag=false;
+						break;
+					}
+				}
+				if(flag==true){
+					newarr.push(this[i]);
+				}
+			}
+			return newarr;
+		}
+		console.log(arr.quchong());*/
+		
+	</script>
+</body>
+</html>

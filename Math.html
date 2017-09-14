@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+
+<body>
+	<div id="box" style="width: 200px;height: 200px;background: red;">
+		
+	</div>
+	<script>
+		/*console.log(Math)
+		Math.random()*/
+		//换页面中的颜色
+		function color(){
+			let str ='rgb('
+			for(let i=0;i<3;i++){
+				let num = Math.round(Math.random()*255);
+				str+=num+',';
+			}
+			str=str.slice(0,-1);
+			str+=')';
+			return str;
+		}
+
+		let box=document.getElementById('box');
+		box.onmouseover=function(){
+			box.style.background=color();
+		}
+		// 从一个数组中选取三个随机数
+		/*let arr=['a','b','c','d','e'];
+		function random(arr,num){
+			let newarr=[];
+			for(let i=0;i<num;i++){
+				let j=Math.floor(Math.random()*arr.length);
+				newarr[i]=arr[j];
+			}
+			return newarr;
+		}
+		console.log(random(arr,4));*/
+		/*let arr=['a','b','c','d','e'];
+		function random(arr,num){
+			let newarr =[];
+			while(newarr.length<num){
+				let j=Math.floor(Math.random()*arr.length);
+				newarr.push(arr[j]);
+			}
+			return newarr;
+		}
+		console.log(random(arr,4));*/
+		// 从一个数组中选取三个随机数,并且三个数不同
+		/*let arr=['a','b','c','d','e'];
+		function random(arr){
+			let newarr=[];
+			for(let i=0;i<3;i++){
+				let j=Math.floor(Math.random()*arr.length);
+				if(!newarr.includes(arr[j])){
+					newarr.push(arr[j]);	
+				}else{
+					i--
+				}	
+			}
+			return newarr;
+		}
+		console.log(random(arr));*/
+		/*let arr=['a','b','c','d','e'];
+		function random(arr,num){
+			let newarr=[];
+			for(let i=0;i<num;i++){
+				let j=Math.floor(Math.random()*arr.length);
+				while(newarr.includes(arr[j])){
+					j=Math.floor(Math.random()*arr.length);
+				}
+				newarr.push(arr[j])
+			}
+			return newarr;
+		}
+		console.log(random(arr,3));*/
+	</script>
+</body>
+</html>
